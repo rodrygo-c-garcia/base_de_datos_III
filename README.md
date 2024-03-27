@@ -11,6 +11,6 @@ Diagramas MER: Aquí encontrarás ejemplos y prácticas relacionadas con la crea
 **Proyectos:** Este espacio estará reservado para proyectos individuales y en grupo relacionados con bases de datos, donde podrás aplicar los conocimientos adquiridos en el curso en casos de estudio del mundo real.
 
 ## Herramientas
-Oracle SQL Developer: Un entorno de desarrollo integrado para trabajar con bases de datos Oracle. Lo utilizaremos para escribir y ejecutar consultas SQL, así como para diseñar y administrar bases de datos.
+**Oracle SQL Developer:** Un entorno de desarrollo integrado para trabajar con bases de datos Oracle. Lo utilizaremos para escribir y ejecutar consultas SQL, así como para diseñar y administrar bases de datos.
 
-ERStudio: Una herramienta de modelado de bases de datos que nos permitirá crear y visualizar diagramas MER y modelos lógicos de manera eficiente.
+**ERStudio:** Una herramienta de modelado de bases de datos que nos permitirá crear y visualizar diagramas MER y modelos lógicos de manera eficiente.
