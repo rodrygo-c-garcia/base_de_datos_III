@@ -1,5 +1,5 @@
 # Base de Datos 3 - Universidad San Francisco Xavier de Chuquisaca
-¡Bienvenido al repositorio de la materia de Base de Datos 3 del 8vo semestre de la carrera de Ingeniería en Ciencias de la Computación en la Universidad San Francisco Xavier de Chuquisaca!
+¡Bienvenido al repositorio de la materia de Base de Datos 3 del **8vo semestre** de la carrera de **Ingeniería en Ciencias de la Computación** en la Universidad San Francisco Xavier de Chuquisaca!
 
 En este repositorio encontrarás materiales y recursos útiles para el aprendizaje de la base de datos, así como ejercicios prácticos, proyectos y enlaces a herramientas importantes utilizadas en el curso.
 
