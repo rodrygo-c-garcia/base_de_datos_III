@@ -15,4 +15,4 @@ Diagramas MER: Aquí encontrarás ejemplos y prácticas relacionadas con la crea
 
 **ERStudio:** Una herramienta de modelado de bases de datos que nos permitirá crear y visualizar diagramas MER y modelos lógicos de manera eficiente.
 
-**DataGrip:** IDE para administrar diferentes DBMS (Sistema Gestor Base de Datos) .
+**DataGrip:** IDE de JetBrains para administrar diferentes DBMS (Sistema Gestor Base de Datos) .
