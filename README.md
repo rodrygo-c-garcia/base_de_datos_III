@@ -14,3 +14,5 @@ Diagramas MER: Aquí encontrarás ejemplos y prácticas relacionadas con la crea
 **Oracle SQL Developer:** Un entorno de desarrollo integrado para trabajar con bases de datos Oracle. Lo utilizaremos para escribir y ejecutar consultas SQL, así como para diseñar y administrar bases de datos.
 
 **ERStudio:** Una herramienta de modelado de bases de datos que nos permitirá crear y visualizar diagramas MER y modelos lógicos de manera eficiente.
+
+**DataGrip:**
