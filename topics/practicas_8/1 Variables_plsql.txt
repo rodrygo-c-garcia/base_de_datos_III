@@ -1,0 +1,69 @@
+-- Ejemplo - Declaracion de variables
+
+set serveroutput on
+
+DECLARE 
+identificador integer := 50;
+nombre varchar2(25):= 'Jose Feliciano';
+apodo char(10):= 'joselo';
+sueldo number(5):=30000;
+comision decimal(4,2):=50.20;
+fecha_actual date :=(sysdate);
+fecha date:=to_date('2020/07/09','yyyy/mm/dd');
+saludo varchar2(50) default 'Buenos dias a todos';
+
+BEGIN 
+dbms_output.put_line('El valor de la variable es: ' || identificador);
+dbms_output.put_line('El nombre del usuario es: ' || nombre);
+dbms_output.put_line('El apodo del usuario es: ' || apodo);
+dbms_output.put_line('El sueldo del usuario es: ' || sueldo);
+dbms_output.put_line('La comision a cobrar del usaurio es de :' || comision);
+dbms_output.put_line('La fecha actual es: ' || fecha_actual);
+dbms_output.put_line('La fecha de contratación es : ' || fecha);
+dbms_output.put_line(saludo);
+
+END;
+
+
+
+-- Declaracion de constantes
+
+declare
+	mensaje constant varchar2(3):='Buenos dias';
+	numero constant number(6):=30000;
+begin
+	dbms_output.put_line(mensaje);
+	dbms_output.put_line(numero);
+end;
+
+
+-- Condicionales if-else-elsif
+
+DECLARE
+	a number(2):=10;
+	b number(2):=20;
+BEGIN
+	if a  > b then
+	   dbms_output.put_line(a || 'es mayor que: ' || b);
+	else
+	   dbms_output.put_line(b || 'es mayor que: ' || a);
+	end if;
+END;
+
+
+
+DECLARE
+	numero number(3):=100;
+BEGIN
+	if (numero = 10) then
+	   dbms_output.put_line('Valor del numero es: 10');
+	elseif (numero = 20) then
+	   dbms_output.put_line('Valor del numero es: 20');
+	elseif (numero = 30) then
+	   dbms_output.put_line('Valor del numero es: 30');
+	else
+	   dbms_output.put_line('Ninguno de los valores fue encontrado');
+	end if;
+	dbms_output.put_line('El valor exacto de la variable es: ' || numero);
+END;
+

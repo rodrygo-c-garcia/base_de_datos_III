@@ -1,0 +1,39 @@
+EJECUCIONES:
+
+create table tabla1( 
+   titulo varchar2(40),
+   precio number(6,2)
+  );
+ 
+uso la tabla de libros ya creada
+select * from libros;
+
+
+/* creacion del procedimiento con variables dentro de los procedimientos*/
+
+   create or replace procedure autorlibro(atitulo in varchar2)
+ as
+   v_autor varchar2(20);
+ begin
+  select autor into v_autor from libros where titulo=atitulo;
+  insert into tabla1
+   select titulo,precio
+   from libros
+   where autor=v_autor;
+ end autorlibro;
+ 
+ execute autorlibro('El quijote');
+
+consulta a la tabla 1 se ve el libro insertado
+select * from tabla1;
+
+nueva consulta a la tabla libros
+
+select * from libros
+
+ execute autorlibro('El alquimista');
+
+consulta a la tabla 1
+select * from tabla1;  -- se ve 2do valor insertado
+
+

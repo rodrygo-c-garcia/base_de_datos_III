@@ -1,0 +1,40 @@
+CREACION DE UNA FUNCION PRUEBA con un parametro
+
+create or replace function f_prueba(valor number)
+return number
+is
+begin
+return valor*2;
+end;
+
+compilamos la funcion
+
+ejecutamos la funcion ( invocamos la funcion f_prueba con parametro 2, 
+que nos traiga en un campo que se va llamar total
+
+select f_prueba(2) as total from dual;
+
+
+CREACION DE UNA FUNCION de la tabla libros
+que definan caracteristicas de precios de esta tabla
+
+-- funcion que nos defina caracteristicas de precio
+
+create or replace function f_costo(valor number)  --recibe un parametro de tipo number
+return varchar
+is
+costo VARCHAR(20);
+begin
+costo:='';
+if valor<=500 then   -si el valor que recibe(q le pasamos)
+costo:='economico';
+else costo:='costoso';
+end if;
+return costo;
+end;
+
+compilamos
+
+ejecutamos
+select titulo, autor, precio, f_costo(precio) from libros;
+
