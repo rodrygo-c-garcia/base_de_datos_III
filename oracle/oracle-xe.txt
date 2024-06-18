@@ -52,3 +52,48 @@ sudo systemctl start oracle-xe
 ### Para activar el servicio al iniciar
 sudo systemctl enable oracle-xe
 
+### PARA CREAR USUARIO ####
+antes de crear, alterar o eliminar un usuario especificamos
+ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
+
+despues creamos un usuario:
+CREATE USER test IDENTIFIED BY SIS306;
+
+consulta para mostrar los usuarios de nuestra BD
+SELECT USERNAME FROM DBA_USERS ORDER BY USERNAME;
+
+
+vemos los permisos del usuario de nuestra BD
+SELECT * FROM DBA_SYS_PRIVS WHERE GRANTEE = 'USUARIO';
+
+permitimos que el usuario puede iniciar SESSION
+GRANT CREATE SESSION TO usuario;
+
+# privilegio de utilizar un espacio ilimitado en cualquier tablespace
+GRANT UNLIMITED TABLESPACE TO username;
+
+# Otorgar permisos para crear, modificar y eliminar tablas:
+GRANT CREATE TABLE TO username;
+GRANT ALTER ANY TABLE TO username;
+GRANT DROP ANY TABLE TO username;
+
+# Otorgar permisos para trabajar con datos en las tablas:
+GRANT INSERT ANY TABLE TO username;
+GRANT UPDATE ANY TABLE TO username;
+GRANT DELETE ANY TABLE TO username;
+
+-- para crear triggers
+GRANT CREATE TRIGGER TO username;
+
+-- Otorgar el privilegio de crear procedimientos
+GRANT CREATE PROCEDURE TO tu_usuario;
+
+-- Otorgar el privilegio de ejecutar procedimientos
+GRANT EXECUTE ANY PROCEDURE TO tu_usuario;
+
+
+
+
+# Permiso para que pueda crear secuencias, es decir auto increment
+GRANT CREATE SEQUENCE TO username;
+
