@@ -1,0 +1,29 @@
+Enunciado del Caso de Estudio: Sistema de Gestión de Biblioteca
+Requisitos del Sistema:
+
+La Biblioteca Pública "BiblioTech" desea implementar un sistema de gestión para mejorar sus operaciones. El sistema debe cubrir las siguientes funcionalidades y características:
+
+Gestión de Libros:
+    La biblioteca cuenta con libros físicos y digitales.
+    Cada libro tiene un ISBN único, título, editorial, año de publicación, género y varios ejemplares disponibles.
+    Los libros digitales tienen un enlace de descarga y el formato (PDF, ePub, etc.), mientras que los libros físicos tienen una ubicación en la estantería.
+
+Gestión de Usuarios:
+    La biblioteca tiene diferentes tipos de usuarios: estudiantes, profesores y público general.
+    Cada usuario tiene un ID único, nombre, apellido, correo electrónico y fecha de registro.
+    Los estudiantes y profesores tienen identificadores específicos y pueden tener acceso a diferentes recursos.
+
+Gestión de Préstamos:
+    Los usuarios pueden prestar libros físicos. Cada préstamo registra la fecha de préstamo y la fecha de devolución.
+    No se permiten préstamos de libros digitales, pero se registra el número de veces que se descarga un libro digital.
+
+Gestión de Autores:
+    Cada autor tiene un ID único, nombre y apellido.
+    Un libro puede tener varios autores y un autor puede haber escrito varios libros (relación muchos a muchos).
+
+Gestión de Categorías y Subcategorías:
+    Los libros se organizan en categorías (Ficción, No Ficción, Ciencia, Historia, etc.).
+    Cada categoría puede tener varias subcategorías (ejemplo: Ciencia -> Física, Química, Biología).
+
+Historial de Transacciones:
+    Se registra el historial de todas las transacciones realizadas en la biblioteca, incluyendo préstamos, devoluciones y descargas de libros digitales.
