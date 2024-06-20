@@ -1,0 +1,46 @@
+Por: Ariel Rodrigo Colque Garcia
+Carrera: Ing. en Ciencias de la Computacion
+
+Enunciado del Caso de Estudio: Sistema de Gestión de Biblioteca
+Requisitos del Sistema:
+
+La Biblioteca "BiblioTech" desea implementar un sistema de gestión para mejorar sus operaciones. El sistema debe cubrir las siguientes funcionalidades y características:
+
+Gestión de Libros:
+    Libros Físicos y Digitales: La biblioteca cuenta con libros físicos y digitales.
+    Características de los Libros: Cada libro tiene un ISBN único, título, editorial, año de publicación, y varios ejemplares disponibles.
+    Libros Digitales: Tienen un enlace de descarga y el formato (PDF, ePub, etc.).
+    Libros Físicos: Tienen una ubicación en la estantería.
+    Autores: Los libros pueden estar escritos por varios autores.
+    Categorías: Los libros pueden estar clasificados en diferentes categorías.
+
+Gestión de Usuarios:
+    Tipos de Usuarios: La biblioteca tiene diferentes tipos de usuarios: estudiantes, profesores y público general.
+    Información de los Usuarios: Cada usuario tiene un ID único, nombre, apellido, correo electrónico y fecha de registro.
+    Estudiantes y Profesores: Tienen identificadores específicos y pueden tener acceso a diferentes recursos de la biblioteca.
+    Tarjeta de Biblioteca: Cada usuario tiene una tarjeta de biblioteca con fecha de expedición y fecha de expiración.
+
+Gestión de Préstamos:
+    Préstamos de Libros Físicos: Los usuarios pueden prestar libros físicos. Cada préstamo registra la fecha de préstamo y la fecha de devolución.
+    Descargas de Libros Digitales: No se permiten préstamos de libros digitales, pero se registra el número de veces que se descarga un libro digital.
+    Responsabilidad de Empleados: Cada préstamo está asociado con un empleado responsable de la transacción.
+
+Gestión de Autores:
+    Información de Autores: Cada autor tiene un ID único, nombre y apellido.
+    Relaciones de Autoría: Un libro puede tener varios autores y un autor puede haber escrito varios libros (relación muchos a muchos).
+
+Gestión de Categorías:
+    Organización de Libros: Los libros se organizan en categorías.
+    Ejemplos de Categorías: Desarrollo Web, Ingeniería de Software, Inteligencia Artificial, Automatización Industrial, Sistemas Mecatrónicos.
+
+Historial de Transacciones:
+    Registro de Transacciones: Se registra el historial de todas las transacciones realizadas en la biblioteca, incluyendo préstamos, devoluciones y descargas de libros digitales.
+    Asociación de Transacciones: Cada transacción está asociada con un usuario y un libro.
+
+Gestión de Multas:
+    Multas por Retraso: Se calculan e imponen multas a los usuarios que devuelvan libros físicos con retraso. La multa se calcula en base a los días de retraso.
+    Registro de Multas: Las multas se registran con detalles del usuario, libro, fecha de la multa, monto y tipo de usuario.
+
+Este sistema de gestión de biblioteca tiene como objetivo optimizar las operaciones, mejorar la eficiencia y ofrecer un mejor servicio a los usuarios de la Biblioteca de la Universidad, "BiblioTech".
+
+

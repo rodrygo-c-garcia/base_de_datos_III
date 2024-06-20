@@ -57,7 +57,7 @@ antes de crear, alterar o eliminar un usuario especificamos
 ALTER SESSION SET "_ORACLE_SCRIPT"=TRUE;
 
 despues creamos un usuario:
-CREATE USER test IDENTIFIED BY SIS306;
+CREATE USER user IDENTIFIED BY SIS306;
 
 consulta para mostrar los usuarios de nuestra BD
 SELECT USERNAME FROM DBA_USERS ORDER BY USERNAME;
