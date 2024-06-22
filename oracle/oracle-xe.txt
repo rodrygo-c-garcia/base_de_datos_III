@@ -97,7 +97,6 @@ GRANT CREATE PROCEDURE TO your_username;
 -- Otorgar el privilegio EXECUTE ANY PROCEDURE
 GRANT EXECUTE ANY PROCEDURE TO your_username;
 
-
 # Permiso para que pueda crear secuencias, es decir auto increment
 GRANT CREATE SEQUENCE TO username;
 
