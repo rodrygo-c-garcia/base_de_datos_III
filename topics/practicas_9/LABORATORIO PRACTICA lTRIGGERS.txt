@@ -1,0 +1,104 @@
+-- EJEMPLO 1 TRIGGER
+
+CODIGOS PARA EL EJEMPLO:
+ --borrar tablas (si existen)
+ drop table libros;
+ drop table control;
+
+ --crear tablas
+ create table libros(
+  codigo number(6),
+  titulo varchar2(40),
+  autor varchar2(30),
+  editorial varchar2(20),
+  precio number(6,2)
+ );
+
+ create table control(
+  usuario varchar2(30),
+  fecha date
+ );
+
+
+
+-- TRIGGER DE CONTROL DE INSERCION DE DATOS 
+
+create or replace trigger tr_ingreso libros
+before insert
+on libros
+begin
+   inserte into control values(user, sysdate);
+   end tr_ingreso libros;
+
+
+
+select * from control:
+-- vacio no hemos insertado datos
+
+select * from libros;
+
+insert into libros values(100,'Uno','Richard Bach','Planeta',25);
+
+select * from control;
+
+
+insert into libros values(102,'Matematica','Deminovich','Nueva era',35);
+
+
+select * from control:
+
+
+
+-- informacion tecnica de nuestro trgger  
+
+select * from USER_TRIGGERS WHERE TRIGGER_NAME='TR_INGRESOLIBROS';
+
+
+-- EJEMPLO 2 TRIGGER
+-- TRIGGGERS A NIVEL DE FILA (for each row)
+
+
+ drop table empleados;
+
+create table empleados(
+  documento char(8),
+  apellido varchar2(30),
+  nombre varchar2(30),
+  seccion varchar2(20)
+ );
+
+
+-- limpiamos nuestra tabla de control
+
+truncate table control;
+
+select * from control;
+
+
+-- triggers que inserta un registro de control por cada registro en la tabla empleados
+
+create or replace trigger ingresaempleados
+before insert
+on empleados
+for each row 
+    begin
+      insert into control values(user, sysdate);
+    end ingresoempleados;
+
+
+
+ insert into empleados values('22333444','ACOSTA','Ana','Secretaria');
+ insert into empleados values('22777888','DOMINGUEZ','Daniel','Secretaria');
+ insert into empleados values('22999000','FUENTES','Federico','Sistemas');
+ insert into empleados values('22555666','CASEROS','Carlos','Contaduria');
+ insert into empleados values('23444555','GOMEZ','Gabriela','Sistemas');
+ insert into empleados values('23666777','JUAREZ','Juan','Contaduria');
+
+
+-- consulta en la tabla control
+
+ select * from control;   
+
+-- borrar un trigger
+
+drop trigger ingresoempleados;

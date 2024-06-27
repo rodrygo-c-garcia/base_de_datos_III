@@ -1,0 +1,106 @@
+--tabla productos
+
+create table productos(
+codigo int not null primary key,
+nombe varchar2(100) not null,
+preciio number(6,2) not null,
+codigo_fabricante int not null
+);
+
+insert into productos values(1,'Disco Duro SATA3 1TB',86.99,5);
+insert into productos values(2,'Memoria RM DDR4 8GB',120,6);
+insert into productos values(3,'Disco SSD 1TB',150.99,4);
+insert into productos values(4,'GeForce GTX 1050 Ti',185,7);
+insert into productos values(5,'GeForce GTX 1050 Xtreme',755,6);
+insert into productos values(6,'Monitor 24 LED Full HD',202,1);
+insert into productos values(7,'Monitor 27 LED Full HD',245.99,1);
+insert into productos values(8,'Portatil Yoga 520',559,2);
+insert into productos values(9,'Portatil Ideapd 320 ',444,2);
+insert into productos values(10,'Impresora HP Deskjet 3720',59.99,3); 
+insert into productos values(11,'Impresora HP LasderJet Pro M26nw',180,3);
+
+
+
+
+-- creacion de especificacion de paquete
+create or replace package los_productos as
+procedure caracteristicas(v_codigo productos.codigo%type);  
+end los_productos;					
+								
+
+
+
+set serveroutput on;
+-- creacion de body de paquete
+create or replace package body los_productos as
+procedure caracteristicas(v_codigo productos.codigo%type) is
+  v_producto productos.nombre%type;
+  v_precio productos.precio%type;
+begin
+  select nombre, precio into v_producto, v_precio
+  from productos where codigo = v_codigo;  
+  dbms_output.put_line('Articulo' || v_producto);
+  dbms_output.put_line('Precio' || v_precio);
+  end caracteristicas;
+end los_productos;
+
+
+ -- EJECUTAR
+
+set serveroutput on;
+begin
+  los_productos.caracteristicas(3);
+end;
+
+
+
+-- LOS_PRODUCTOS
+create or replace package los_productos as
+procedure caracteristicas(v_codigo productos.codigo%type); 
+
+function f_precio(v_codigo int)
+return number;
+ 
+end los_productos;
+
+
+
+-- LOS_PRODUCTOS body
+create or replace package body los_productos as
+procedure caracteristicas(v_codigo productos.codigo%type) is
+  v_producto productos.nombre%type;
+  v_precio productos.precio%type;
+begin
+  select nombre, precio into v_producto, v_precio
+  from productos where codigo = v_codigo;  -- codigo sea el valor que vamos a introducir cuando ejecutemos el proc caracteriticas
+  dbms_output.put_line('Articulo' ii v_producto);
+  dbms_output.put_line('Precio' ii v_precio);
+  end caracteristicas;  
+
+-------------------------------------------------------------------
+-- creamos la funcion agregando 
+function f_precio(v_codigo int)
+   return number
+   as
+   v_precio number;
+   begin
+   select precio into v_precio   
+   from productos where codigo = v_codigo;  
+   return v_precio;
+end f_precio;
+
+
+end los_productos;
+
+
+
+VOLVEMOS A NUESTRO EDITOR Y ..
+
+
+
+select los_productos.f_precio(4) from dual;
+
+
+select los_productos.f_precio(4) as Precio from dual;
+
+ 
