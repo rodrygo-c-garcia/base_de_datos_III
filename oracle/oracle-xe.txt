@@ -1,3 +1,11 @@
+# para la instalacion
+sudo pacman -U archivo-linux_a_instalar
+
+#PASSWORD
+
+# cambir contrasena
+sudo passwd oracle => oracle-xe
+
 #### INICIAR
 su -s /bin/bash oracle -c '/opt/oracle/product/18c/dbhomeXE/bin/dbca -silent \
 -createDatabase -gdbName XE -templateName XE_Database.dbc -characterSet AL32UTF8 \
@@ -6,11 +14,6 @@ su -s /bin/bash oracle -c '/opt/oracle/product/18c/dbhomeXE/bin/dbca -silent \
 -emExpressPort 5500 -J-Doracle.assistants.dbca.validate.DBCredentials=false -sampleSchema true \
 -customScripts /opt/oracle/product/18c/dbhomeXE/assistants/dbca/postdb_creation.sql'
 
-
-#PASSWORD
-
-# cambir contrasena
-sudo passwd oracle 
 
 # SQLPLUS
 # Agregar permisos a orcle
